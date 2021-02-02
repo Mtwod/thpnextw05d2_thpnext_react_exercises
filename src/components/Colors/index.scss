@@ -1,0 +1,30 @@
+@mixin case-format {
+  width: 200px;
+  height: 200px;
+}
+
+.ColorCase {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+
+  #{&}__red {
+    @include case-format();
+    background-color: red;
+  }
+
+  #{&}__yellow {
+    @include case-format();
+    background-color: yellow;
+  }
+
+  #{&}__green {
+    @include case-format();
+    background-color: green;
+  }
+
+  #{&}__blue {
+    @include case-format();
+    background-color: blue;
+  }
+}
